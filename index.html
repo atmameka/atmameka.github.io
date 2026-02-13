@@ -5,10 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ekha Digital - Undangan Digital Elegan & Modern</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 <style>
-body{
+*{
 margin:0;
-font-family: 'Segoe UI', sans-serif;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins', sans-serif;
 background:#0f0f0f;
 color:white;
 }
@@ -16,17 +24,25 @@ color:white;
 nav{
 display:flex;
 justify-content:space-between;
-padding:20px 50px;
-background:#000;
+padding:20px 60px;
+background:rgba(0,0,0,0.85);
 position:fixed;
 width:100%;
 top:0;
+backdrop-filter:blur(8px);
+z-index:1000;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:20px;
+margin-left:25px;
+transition:0.3s;
+font-weight:300;
+}
+
+nav a:hover{
+color:gold;
 }
 
 .hero{
@@ -36,43 +52,103 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:linear-gradient(to right,#111,#222);
+background:linear-gradient(135deg,#111,#1c1c1c);
 padding:20px;
 }
 
 .hero h1{
-font-size:48px;
-margin-bottom:10px;
+font-size:55px;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:650px;
+opacity:0.8;
+margin-bottom:30px;
 }
 
 .btn{
-padding:15px 35px;
+padding:15px 40px;
 background:gold;
 color:black;
-border-radius:30px;
+border-radius:50px;
 text-decoration:none;
-margin-top:20px;
-display:inline-block;
+font-weight:500;
+transition:0.3s;
+}
+
+.btn:hover{
+background:white;
+transform:scale(1.05);
 }
 
 .section{
-padding:100px 20px;
+padding:120px 20px;
 text-align:center;
+}
+
+.section h2{
+margin-bottom:60px;
+font-size:36px;
+}
+
+.card-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
 }
 
 .card{
 background:#1a1a1a;
-padding:30px;
-border-radius:15px;
-margin:20px;
-display:inline-block;
-width:250px;
+padding:40px 30px;
+border-radius:20px;
+width:280px;
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-12px);
+background:#222;
+}
+
+.price{
+font-size:28px;
+color:gold;
+margin-top:15px;
+}
+
+.portfolio img{
+width:280px;
+border-radius:20px;
+transition:0.3s;
+}
+
+.portfolio img:hover{
+transform:scale(1.05);
+}
+
+.testimonial{
+background:#141414;
+padding:40px;
+border-radius:20px;
+width:300px;
 }
 
 footer{
 background:#000;
 text-align:center;
+padding:30px;
+opacity:0.7;
+}
+
+@media(max-width:768px){
+nav{
 padding:20px;
+}
+.hero h1{
+font-size:36px;
+}
 }
 </style>
 </head>
@@ -82,40 +158,74 @@ padding:20px;
 <nav>
 <div><strong>Ekha Digital</strong></div>
 <div>
-<a href="#paket">Paket</a>
 <a href="#keunggulan">Keunggulan</a>
+<a href="#paket">Paket</a>
+<a href="#portfolio">Portofolio</a>
+<a href="#testimoni">Testimoni</a>
 <a href="https://wa.me/628XXXXXXXXX">Kontak</a>
 </div>
 </nav>
 
 <div class="hero">
 <h1>Undangan Digital Elegan & Modern</h1>
-<p>Buat momen pernikahan Anda tampil lebih berkelas dengan undangan digital eksklusif.</p>
-<a href="https://wa.me/6281999691434" class="btn">Pesan Sekarang</a>
+<p>Buat momen pernikahan Anda tampil lebih berkelas dengan undangan digital eksklusif, elegan, dan profesional.</p>
+<a href="https://wa.me/628XXXXXXXXX" class="btn">Pesan Sekarang</a>
 </div>
 
 <div class="section" id="keunggulan">
 <h2>Kenapa Pilih Kami?</h2>
-<div class="card">Desain Elegan</div>
-<div class="card">Mobile Friendly</div>
-<div class="card">Custom Nama & Foto</div>
-<div class="card">Harga Terjangkau</div>
+<div class="card-container">
+<div class="card">✨ Desain Premium & Elegan</div>
+<div class="card">📱 Mobile Friendly</div>
+<div class="card">💎 Custom Nama & Foto</div>
+<div class="card">🎵 Musik & Countdown</div>
+<div class="card">📍 Google Maps</div>
+<div class="card">💬 RSVP Online</div>
+</div>
 </div>
 
 <div class="section" id="paket">
 <h2>Paket Harga</h2>
+<div class="card-container">
 <div class="card">
 <h3>Basic</h3>
-<p>Rp 25.000</p>
+<div class="price">Rp 99.000</div>
+<p>Template standar</p>
 </div>
 <div class="card">
 <h3>Premium</h3>
-<p>Rp 50.000</p>
+<div class="price">Rp 149.000</div>
+<p>Custom desain + musik</p>
 </div>
 <div class="card">
 <h3>Exclusive</h3>
-<p>Rp 100.000</p>
+<div class="price">Rp 199.000</div>
+<p>Full custom + domain</p>
 </div>
+</div>
+</div>
+
+<div class="section portfolio" id="portfolio">
+<h2>Contoh Portofolio</h2>
+<div class="card-container">
+<img src="https://picsum.photos/300/500?1">
+<img src="https://picsum.photos/300/500?2">
+<img src="https://picsum.photos/300/500?3">
+</div>
+</div>
+
+<div class="section" id="testimoni">
+<h2>Testimoni Klien</h2>
+<div class="card-container">
+<div class="testimonial">"Desainnya elegan banget! Recommended." - Andi</div>
+<div class="testimonial">"Pelayanan cepat dan hasilnya memuaskan." - Sari</div>
+<div class="testimonial">"Harga terjangkau tapi terlihat mahal!" - Rina</div>
+</div>
+</div>
+
+<div class="section">
+<h2>Siap Membuat Undangan Digital Anda?</h2>
+<a href="https://wa.me/628XXXXXXXXX" class="btn">Chat Sekarang</a>
 </div>
 
 <footer>
